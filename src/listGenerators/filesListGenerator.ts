@@ -39,7 +39,7 @@ export class FilesListGenerator extends ListGenerator {
 
   constructor(param: FilesListGeneratorParams) {
     super({
-      wikiPageFilename: 'associations.md',
+      wikiPageFilename: 'docs/reference/associations.md',
       associationsFile: 'icon_associations.json',
       logGroupId: 'files',
       pargs: param.pargs,

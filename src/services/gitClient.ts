@@ -75,7 +75,7 @@ export class GitClient<T extends CommandArgs> {
     this.wikiRepoFolder = pathUnixJoin(this.rootFolder, 'tmp', this.pargs.account, `${ROOT}.wiki`);
 
     this.codeRepoUrl = `https://github.com/${this.pargs.account}/${ROOT}`;
-    this.wikiRepoUrl = `${this.codeRepoUrl}.wiki`;
+    this.wikiRepoUrl = `https://github.com/${this.pargs.account}/material-theme-jetbrains-docs`;
   }
 
   /**
@@ -278,7 +278,7 @@ export class GitClient<T extends CommandArgs> {
 
     try {
       // Push master
-      const result = await remote.push(['refs/heads/master:refs/heads/master'], options);
+      const result = await remote.push(['refs/heads/docs:refs/heads/docs'], options);
       this.logger.spinnerLogStop(spinner, `Commit${s} pushed`, this.logGroupId);
       clearTimeout(timer);
       return result;
